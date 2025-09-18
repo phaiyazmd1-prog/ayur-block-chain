@@ -15,7 +15,7 @@ interface TraceabilityRecord {
     farmerName: string;
     location: string;
     coordinates: string;
-    harvestDate: string;
+    AdharCard: string;
     herbType: string;
     quantity: string;
   };
@@ -51,7 +51,7 @@ const Scanner = () => {
       farmerName: 'Rajesh Kumar Sharma',
       location: 'Village Rampur, Haridwar, Uttarakhand',
       coordinates: '29.9457, 78.1642',
-      harvestDate: '2024-01-15',
+      AdharCard: '2024-01-15',
       herbType: 'Ashwagandha (Withania somnifera)',
       quantity: '25.5 kg'
     },
@@ -326,7 +326,7 @@ const Scanner = () => {
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4 text-muted-foreground" />
                       <div>
-                        <p className="font-medium">Harvested: {new Date(scannedData.collectionData.harvestDate).toLocaleDateString()}</p>
+                        <p className="font-medium">Harvested: {new Date(scannedData.collectionData.AdharCard).toLocaleDateString()}</p>
                         <p className="text-sm text-muted-foreground">Collection Date</p>
                       </div>
                     </div>
