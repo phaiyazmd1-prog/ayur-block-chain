@@ -1,12 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import FarmerDashboard from '@/components/FarmerDashboard';
+import QRGenerator from '@/components/QRGenerator';
+import Scanner from '@/components/Scanner';
+import BlockchainDashboard from '@/components/BlockchainDashboard';
 
 const Index = () => {
+  const [currentView, setCurrentView] = useState('home');
+
+  const renderCurrentView = () => {
+    switch (currentView) {
+      case 'farmer':
+        return <FarmerDashboard />;
+      case 'qr-generator':
+        return <QRGenerator />;
+      case 'scanner':
+        return <Scanner />;
+      case 'blockchain':
+        return <BlockchainDashboard />;
+      default:
+        return <HeroSection onViewChange={setCurrentView} />;
+    }
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation currentView={currentView} onViewChange={setCurrentView} />
+      <motion.main
+        key={currentView}
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -20 }}
+        transition={{ duration: 0.3 }}
+      >
+        {renderCurrentView()}
+      </motion.main>
     </div>
   );
 };
