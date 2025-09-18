@@ -108,7 +108,7 @@ const FarmerDashboard = () => {
             <CardHeader className="bg-herb-gradient text-white">
               <CardTitle className="flex items-center gap-2">
                 <Leaf className="w-6 h-6" />
-                Collection Event Registration
+                Farmer Registration
               </CardTitle>
             </CardHeader>
             <CardContent className="p-8">
@@ -137,7 +137,7 @@ const FarmerDashboard = () => {
                     </Label>
                     <Input
                       id="AdharCard"
-                      type="."
+                      type="number"
                       value={formData.AdharCard}
                       onChange={(e) => setFormData(prev => ({ ...prev, AdharCard: e.target.value }))}
                       required
@@ -148,10 +148,10 @@ const FarmerDashboard = () => {
                 {/* Herb Information */}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="herb-type">Herb Species</Label>
+                    <Label htmlFor="herb-type">  List of Herbs </Label>
                     <Select value={formData.herbType} onValueChange={(value) => setFormData(prev => ({ ...prev, herbType: value }))}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select herb species" />
+                        <SelectValue placeholder=" List of Herbs" />
                       </SelectTrigger>
                       <SelectContent>
                         {herbTypes.map((herb) => (
@@ -163,7 +163,7 @@ const FarmerDashboard = () => {
                     </Select>
                   </div>
                   
-                  <div className="space-y-2">
+                  {/* <div className="space-y-2">
                     <Label htmlFor="quantity">Quantity (kg)</Label>
                     <Input
                       id="quantity"
@@ -174,13 +174,13 @@ const FarmerDashboard = () => {
                       step="0.1"
                       required
                     />
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Location Information */}
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="location">Collection Location</Label>
+                    <Label htmlFor="location"> Location of Farm</Label>
                     <Input
                       id="location"
                       value={formData.location}
@@ -190,7 +190,7 @@ const FarmerDashboard = () => {
                     />
                   </div>
                   
-                  <div className="space-y-2">
+                  {/* <div className="space-y-2">
                     <Label htmlFor="coordinates">GPS Coordinates</Label>
                     <div className="flex gap-2">
                       <Input
@@ -210,11 +210,11 @@ const FarmerDashboard = () => {
                         {isCollecting ? 'Getting Location...' : 'Capture GPS'}
                       </Button>
                     </div>
-                  </div>
-                </div>
+                  </div> */}
+                {/* </div>
 
-                {/* Quality Notes */}
-                <div className="space-y-2">
+                 {/* Quality Notes */}
+                {/* <div className="space-y-2">
                   <Label htmlFor="quality-notes">Quality & Collection Notes</Label>
                   <Textarea
                     id="quality-notes"
@@ -222,11 +222,11 @@ const FarmerDashboard = () => {
                     onChange={(e) => setFormData(prev => ({ ...prev, qualityNotes: e.target.value }))}
                     placeholder="e.g., Collected during early morning hours, plants showed excellent health, no pest damage observed, proper moisture content..."
                     rows={4}
-                  />
-                </div>
+                  /> */}
+                {/* </div> 
 
                 {/* Photo Upload Section */}
-                <div className="space-y-4 p-6 border-2 border-dashed border-border rounded-lg bg-muted/20">
+                {/* <div className="space-y-4 p-6 border-2 border-dashed border-border rounded-lg bg-muted/20">
                   <div className="text-center">
                     <Camera className="w-8 h-8 mx-auto mb-2 text-muted-foreground" />
                     <p className="text-sm text-muted-foreground mb-4">
@@ -236,7 +236,7 @@ const FarmerDashboard = () => {
                       <Upload className="w-4 h-4 mr-2" />
                       Choose Photos
                     </Button>
-                  </div>
+                  </div>  */}
                 </div>
 
                 {/* Submit Button */}
