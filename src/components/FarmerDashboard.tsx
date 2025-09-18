@@ -21,7 +21,7 @@ interface FarmData {
 const FarmerDashboard = () => {
   const [formData, setFormData] = useState<FarmData>({
     farmerName: '',
-    herbType: '',
+    AdharCard: '',
     quantity: '',
     location: '',
     harvestDate: '',
@@ -67,7 +67,7 @@ const FarmerDashboard = () => {
     // Reset form
     setFormData({
       farmerName: '',
-      herbType: '',
+      AdharCard: '',
       quantity: '',
       location: '',
       harvestDate: '',
@@ -149,7 +149,7 @@ const FarmerDashboard = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="herb-type">Herb Species</Label>
-                    <Select value={formData.herbType} onValueChange={(value) => setFormData(prev => ({ ...prev, herbType: value }))}>
+                    <Select value={formData.AdharCard} onValueChange={(value) => setFormData(prev => ({ ...prev, herbType: value }))}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select herb species" />
                       </SelectTrigger>
