@@ -10,7 +10,7 @@ import { MapPin, Upload, Camera, Leaf, Users, Calendar } from 'lucide-react';
 
 interface FarmData {
   farmerName: string;
-  herbType: string;
+  AdharCard: string;
   quantity: string;
   location: string;
   harvestDate: string;
