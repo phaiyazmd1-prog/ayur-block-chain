@@ -133,11 +133,11 @@ const FarmerDashboard = () => {
                   <div className="space-y-2">
                     <Label htmlFor="harvest-date" className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      Harvest Date
+                     AdharCard
                     </Label>
                     <Input
-                      id="harvest-date"
-                      type="date"
+                      id="AdharCard"
+                      type="."
                       value={formData.AdharCard}
                       onChange={(e) => setFormData(prev => ({ ...prev, AdharCard: e.target.value }))}
                       required
