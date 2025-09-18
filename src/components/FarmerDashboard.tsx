@@ -10,10 +10,10 @@ import { MapPin, Upload, Camera, Leaf, Users, Calendar } from 'lucide-react';
 
 interface FarmData {
   farmerName: string;
-  AdharCard: string;
+  herbType: string;
   quantity: string;
   location: string;
-  harvestDate: string;
+  AdharCard: string;
   qualityNotes: string;
   coordinates: string;
 }
@@ -21,10 +21,10 @@ interface FarmData {
 const FarmerDashboard = () => {
   const [formData, setFormData] = useState<FarmData>({
     farmerName: '',
-    AdharCard: '',
+    herbType: '',
     quantity: '',
     location: '',
-    harvestDate: '',
+    AdharCard: '',
     qualityNotes: '',
     coordinates: ''
   });
@@ -67,10 +67,10 @@ const FarmerDashboard = () => {
     // Reset form
     setFormData({
       farmerName: '',
-      AdharCard: '',
+      herbType: '',
       quantity: '',
       location: '',
-      harvestDate: '',
+      AdharCard: '',
       qualityNotes: '',
       coordinates: ''
     });
@@ -138,7 +138,7 @@ const FarmerDashboard = () => {
                     <Input
                       id="harvest-date"
                       type="date"
-                      value={formData.harvestDate}
+                      value={formData.AdharCard}
                       onChange={(e) => setFormData(prev => ({ ...prev, harvestDate: e.target.value }))}
                       required
                     />
@@ -149,7 +149,7 @@ const FarmerDashboard = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="herb-type">Herb Species</Label>
-                    <Select value={formData.AdharCard} onValueChange={(value) => setFormData(prev => ({ ...prev, herbType: value }))}>
+                    <Select value={formData.herbType} onValueChange={(value) => setFormData(prev => ({ ...prev, herbType: value }))}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select herb species" />
                       </SelectTrigger>
