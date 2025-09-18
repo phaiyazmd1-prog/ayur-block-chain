@@ -139,7 +139,7 @@ const FarmerDashboard = () => {
                       id="harvest-date"
                       type="date"
                       value={formData.AdharCard}
-                      onChange={(e) => setFormData(prev => ({ ...prev, harvestDate: e.target.value }))}
+                      onChange={(e) => setFormData(prev => ({ ...prev, AdharCard: e.target.value }))}
                       required
                     />
                   </div>
