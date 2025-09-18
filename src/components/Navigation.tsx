@@ -46,7 +46,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentView, onViewChange }) =>
                 <Leaf className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-herb-gradient bg-clip-text text-transparent">
-                Herbal
+                Ayur Trace
               </span>
             </motion.div>
 
